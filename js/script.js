@@ -14,24 +14,27 @@ var euroKm = 0.21;
 var prezzoKm = (numeroKm * euroKm).toFixed(2);
 console.log (prezzoKm);
 // ma va applicato uno sconto del 20% per i minorenni e del 40% per gli over 65.
-var over = 65
-var under = 18
+var over = 65;
+var under = 18;
 
 if (anni >= over) {
   console.log (prezzoKm - ((prezzoKm * 40) / 100).toFixed(2));
-  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm - ((prezzoKm * 40) / 100).toFixed(2));
+
+  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm - ((prezzoKm * 40) / 100).toFixed(2)) + "€";
 }
 else if (anni < under){
   console.log (prezzoKm - ((prezzoKm *20) / 100).toFixed(2));
-  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm - ((prezzoKm *20) / 100).toFixed(2));
+
+  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm - ((prezzoKm *20) / 100).toFixed(2)) + "€";
 }
 else {
   console.log (prezzoKm);
-  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm);
+
+  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm) + "€";
 }
 
 // stampa su foglio html
 // km
-document.getElementById('km').innerHTML = numeroKm
+document.getElementById('km').innerHTML = numeroKm;
 // età
-document.getElementById('età').innerHTML = anni
+document.getElementById('età').innerHTML = anni;
