@@ -4,6 +4,8 @@ var numeroKm = parseInt(prompt('Quanti Km devi percorrere?'));
 console.log (numeroKm);
  // e l’età del passeggero.
 
+var anni = parseInt(prompt('Quanti anni hai?'));
+console.log(anni);
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio.
 
