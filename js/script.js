@@ -18,13 +18,20 @@ var over = 65
 var under = 18
 
 if (anni >= over) {
-  console.log (parseFloat(prezzoKm - ((prezzoKm * 40) / 100)).toFIxed(2))
+  console.log (parseFloat(prezzoKm - ((prezzoKm * 40) / 100)).toFixed(2));
+  document.getElementById('prezzo_biglietto').innerHTML = (parseFloat(prezzoKm - ((prezzoKm * 40) / 100)).toFixed(2));
 }
 else if (anni < under){
-  console.log (parseFloat(prezzoKm - ((prezzoKm *20) / 100)).toFIxed(2));
+  console.log (parseFloat(prezzoKm - ((prezzoKm *20) / 100)).toFixed(2));
+  document.getElementById('prezzo_biglietto').innerHTML = (parseFloat(prezzoKm - ((prezzoKm *20) / 100)).toFixed(2));
 }
 else {
   console.log(parseFloat(prezzoKm).toFixed(2));
+  document.getElementById('prezzo_biglietto').innerHTML = (parseFloat(prezzoKm).toFixed(2));
 }
 
-// conclusione
+// stampa su foglio html
+// km
+document.getElementById('km').innerHTML = numeroKm
+// età
+document.getElementById('età').innerHTML = anni
