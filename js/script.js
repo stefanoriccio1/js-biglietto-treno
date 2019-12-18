@@ -11,23 +11,23 @@ console.log (anni);
 
 // Il prezzo del biglietto è definito in base ai km (0.21 € al km)
 var euroKm = 0.21;
-var prezzoKm = parseFloat(numeroKm * euroKm).toFixed(2);
+var prezzoKm = (numeroKm * euroKm).toFixed(2);
 console.log (prezzoKm);
 // ma va applicato uno sconto del 20% per i minorenni e del 40% per gli over 65.
 var over = 65
 var under = 18
 
 if (anni >= over) {
-  console.log (parseFloat(prezzoKm - ((prezzoKm * 40) / 100)).toFixed(2));
-  document.getElementById('prezzo_biglietto').innerHTML = (parseFloat(prezzoKm - ((prezzoKm * 40) / 100)).toFixed(2));
+  console.log (prezzoKm - ((prezzoKm * 40) / 100)).toFixed(2);
+  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm - ((prezzoKm * 40) / 100)).toFixed(2);
 }
 else if (anni < under){
-  console.log (parseFloat(prezzoKm - ((prezzoKm *20) / 100)).toFixed(2));
-  document.getElementById('prezzo_biglietto').innerHTML = (parseFloat(prezzoKm - ((prezzoKm *20) / 100)).toFixed(2));
+  console.log (prezzoKm - ((prezzoKm *20) / 100)).toFixed(2);
+  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm - ((prezzoKm *20) / 100)).toFixed(2);
 }
 else {
-  console.log(parseFloat(prezzoKm).toFixed(2));
-  document.getElementById('prezzo_biglietto').innerHTML = (parseFloat(prezzoKm).toFixed(2));
+  console.log (prezzoKm);
+  document.getElementById('prezzo_biglietto').innerHTML = (prezzoKm);
 }
 
 // stampa su foglio html
